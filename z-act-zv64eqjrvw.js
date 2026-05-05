@@ -1,3 +1,5 @@
+// For academic demo purposes - bsit basic coding lessons
+
 // SHORTCUT:CALENDAR
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,15 +29,6 @@ GROUPINGS - green
  MEETING: Black/Gray
  PROJECT/PT: Purple
 */
-
-// MAY 2 -----------------
-  setEvent('dt-2', `
-    <div class="event">
-      <p>🎹 SRDCC - Anticipated Mass<br>
-      <span class="time">3:30 p.m.</span></p>
-      <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
-    </div>
-  `);
 
 // MAY 9 -----------------
   setEvent('dt-9', `
