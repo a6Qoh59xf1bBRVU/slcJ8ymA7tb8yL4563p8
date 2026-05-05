@@ -1,4 +1,4 @@
-// For academic demo purposes - bsit basic coding lessons
+// For academic demo purposes - bsit basic coding lessons / personal project example data
 
 // SHORTCUT:CALENDAR
 
@@ -57,7 +57,7 @@ GROUPINGS - green
     </div> <div class="event ev-mb" onclick="document.getElementById('activitymodal').style.display='block'; apr30idmaking();">
       <p>🏫 I.D. Making @ LPCA<br>
       <span class="time">8:00 a.m.</span></p>
-      <div class="chp chp-r c-red"><a class="c-txt2">● Not started</a></div><br>
+      <div class="chp chp-r c-green"><a class="c-txt2">● Done</a></div><br>
     </div>
   `);
 
