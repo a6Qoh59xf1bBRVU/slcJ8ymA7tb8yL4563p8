@@ -78,9 +78,7 @@ GROUPINGS - green
       <div class="chp chp-r c-green"><a class="c-txt2">● Done</a></div><br>
     </div>
   `);
-
-});
-
+	
 // MAY 11 -----------------
   setEvent('dt-11', `
     <div class="event">
@@ -88,6 +86,10 @@ GROUPINGS - green
       <span class="time">7:00 a.m.</span></p>
     </div>
   `);
+	
+});
+
+
 
 
 // SHORTCUT:ACTIVITY INFO - fictitious data for juan dl cruz for testing purposes capstone project
