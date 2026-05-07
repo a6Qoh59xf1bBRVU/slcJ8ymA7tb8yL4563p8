@@ -81,6 +81,14 @@ GROUPINGS - green
 
 });
 
+// MAY 11 -----------------
+  setEvent('dt-11', `
+    <div class="event">
+      <p>📇 Resumption of Office Transactiona<br>
+      <span class="time">7:00 a.m.</span></p>
+    </div>
+  `);
+
 
 // SHORTCUT:ACTIVITY INFO - fictitious data for juan dl cruz for testing purposes capstone project
 
