@@ -87,6 +87,12 @@ function createChip2(text, colorClass, extraClass = "") {
   `;
 }
 
+function createLink(link = "") {
+  return `
+<div class="chp c-gray"> <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="c-icn"> <use href="#linc"></use> </svg> <a target="_blank" href="${link}" class="c-txt2">Link</a></div>
+`
+}
+
 
 // DATA ------------------
 
@@ -178,6 +184,9 @@ function clearCourse() {
   document.getElementById("professor").innerHTML = "-";
   document.getElementById("courseschedule").innerHTML = "-";
 
+document.querySelectorAll(".trow").forEach(el => el.style.display = "none");
+  document.querySelectorAll(".crow").forEach(el => el.style.display = "none");
+
   const categories = ['tname', 'tdate', 'tlink', 'cname', 'cstatus', 'cdue', 'cformat', 'ctype', 'cscore'];
   categories.forEach(cat => {
     for (let i = 0; i <= 10; i++) {
@@ -186,39 +195,3 @@ function clearCourse() {
     }
   });
 }
-
-// CLEAR ====
-
-function clearActivity() {
-  setActivity({});
-}
-
-function testCourse() {
-  setCourse({
-    tasks: [
-    ],
-    works: [
-    ]
-   });
-}
-
-// testing generic INFORMATION for juan dl cruz - capstone project purposes
-
-// DATE
-function daysAgo(id, month, day) {
-const el = document.getElementById(id);
-if (!el) return;
-const d = new Date();
-const t = new Date(d.getFullYear(), month - 1, day);
-let diff = Math.floor((d - t) / (1000 * 60 * 60 * 24));
-el.textContent =
-diff === 0
-      ? "Due today"
-      : diff > 0
-      ? `Overdue`
-      : `Due in ${-diff} day${diff < -1 ? "s" : ""}`;
-}
-window.addEventListener("DOMContentLoaded", () => {
-  daysAgo("apr24", 4, 24);
-  daysAgo("apr23", 4, 23);
-});
