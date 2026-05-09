@@ -30,35 +30,76 @@ GROUPINGS - green
  PROJECT/PT: Purple
 */
 
-// MAY 9 -----------------
-  setEvent('dt-9', `
+// MAY 09 -----------------
+  setEvent('may-09', `
     <div class="event">
       <p>🎹 SRDCC - Anticipated Mass<br>
       <span class="time">3:30 p.m.</span></p>
       <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
     </div>
   `);
-      
+
+
 // MAY 16 -----------------
-  setEvent('dt-16', `
+  setEvent('may-16', `
     <div class="event">
-      <p>🎹 SRDCC - Anticipated Mass<br>
-      <span class="time">3:30 p.m.</span></p>
+      <p>🎹 SRDCC - Anticipated Mass & Practice<br>
+      <span class="time">3:00 p.m.</span></p>
+      <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
+    </div>
+  `);
+
+// MAY 23 -----------------
+  setEvent('may-23', `
+    <div class="event">
+      <p>🎹 SRDCC - Anticipated Mass & Practice<br>
+      <span class="time">3:00 p.m.</span></p>
+      <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
+    </div>
+  `);
+
+// MAY 20 -----------------
+  setEvent('may-20', `
+    <div class="event">
+      <p>🎹 SRDCC - Triduum Mass<br>
+      <span class="time">6:00 p.m.</span></p>
+      <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
+    </div>
+  `);
+
+// MAY 21 -----------------
+  setEvent('may-21', `
+    <div class="event">
+      <p>🎹 SRDCC - Triduum Mass<br>
+      <span class="time">6:00 p.m.</span></p>
+      <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
+    </div>
+  `);
+
+// MAY 22 -----------------
+  setEvent('may-22', `
+    <div class="event">
+      <p>⛪ Feast of Saint Rita of Cascia Mass<br>
+      <span class="time">9:00 a.m.</span></p>
       <div class="chp c-brown"><a class="c-txt2">Service</a></div><br>
     </div>
   `);
       
 // MAY 15 -----------------
-  setEvent('dt-15', `
+  setEvent('may-15', `
     <div class="event" onclick="may15idmaking()">
       <p>🏫 I.D. Making @ LPCA<br>
       <span class="time">8:15 a.m.</span></p>
       <div class="chp c-yellow"><a class="c-txt2">Activity</a></div><br>
     </div>
+<div class="event ev-mb" onclick="may15idmaking()">
+      <p>🎤 Practice - SRDCC<br>
+      <span class="time">5:00 p.m.</span></p>
+    </div>
   `);
 	
 // MAY 11 -----------------
-  setEvent('dt-11', `
+  setEvent('may-11', `
     <div class="event">
       <p>📇 Resumption of Office Transactions<br>
       <span class="time">7:00 a.m.</span></p>
