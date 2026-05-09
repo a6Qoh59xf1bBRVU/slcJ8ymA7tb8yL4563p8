@@ -25,23 +25,7 @@ function openCourse(crsName) {
   document.getElementById(crsName).style.display = "block";  
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const today = new Date().getDate();
 
-  document.querySelectorAll(".date").forEach(el => {
-        el.classList.remove("slct-dt");
-
-    const dtClass = [...el.classList].find(c => c.startsWith("dt-"));
-
-    if (dtClass) {
-      const day = parseInt(dtClass.split("-")[1]);
-
-      if (day === today) {
-        el.classList.add("slct-dt");
-      }
-    }
-  });
-});
 
 // TODAYS
 
@@ -195,3 +179,75 @@ document.querySelectorAll(".trow").forEach(el => el.style.display = "none");
     }
   });
 }
+
+// CALENDAR FILLER
+
+const weeks = [
+  document.getElementById("week1"),
+  document.getElementById("week2"),
+  document.getElementById("week3"),
+  document.getElementById("week4")
+];
+
+const today = new Date();
+
+const months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+
+function getStartOfWeek(date) {
+  const start = new Date(date);
+  const day = start.getDay();
+  start.setDate(start.getDate() - day);
+  return start;
+}
+
+function getWeekOfMonth(date) {
+  const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+  const offset = firstDay.getDay();
+  return Math.floor((date.getDate() + offset - 1) / 7);
+}
+
+function highlightToday() {
+  const d = today.getDate();
+  const m = months[today.getMonth()];
+
+  document.querySelectorAll(".date").forEach(el => {
+    el.classList.remove("slct-dt");
+
+    const cls = [...el.classList].find(c => c.startsWith(m + "-"));
+    if (!cls) return;
+
+    const day = parseInt(cls.split("-")[1]);
+    if (day === d) el.classList.add("slct-dt");
+  });
+}
+
+const startWeek = getWeekOfMonth(today);
+let currentDate = getStartOfWeek(today);
+
+for (let w = startWeek; w < weeks.length; w++) {
+  const row = weeks[w];
+  if (!row) continue;
+
+  row.innerHTML = "";
+
+  for (let d = 0; d < 7; d++) {
+    const day = currentDate.getDate();
+    const month = months[currentDate.getMonth()];
+    const dow = currentDate.getDay();
+
+    const td = document.createElement("td");
+    td.className = "wd-day" + ((dow === 0 || dow === 6) ? " wknd" : "");
+
+    td.innerHTML = `
+      <h6 class="k6 j9">
+        <label class="date ${month}-${String(day).padStart(2, '0')}">${day}</label>
+      </h6>
+      <div class="fl"></div>
+    `;
+
+    row.appendChild(td);
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+}
+
+highlightToday();
