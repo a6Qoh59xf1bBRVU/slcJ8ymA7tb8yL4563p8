@@ -71,9 +71,30 @@ function createChip2(text, colorClass, extraClass = "") {
   `;
 }
 
-function createLink(link = "") {
-  return `
+
+function createTrow(no, title, date, link = "") {
+ return `
+<th class="mdl m-l w10"><p class="k9 j12">${no}</p></th><th class="mdl w60"><p class="k9 j12">${title}</p></th><th class="mdl w15"><p class="k9 j12">${date}</p></th><th class="mdl w15 m-r">
 <div class="chp c-gray"> <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="c-icn"> <use href="#linc"></use> </svg> <a target="_blank" href="${link}" class="c-txt2">Link</a></div>
+</th>
+`
+}
+
+function createCrow(color, status, name, color2, format, color3, type, score, due = "") {
+ return ` 
+<th class="mdl m-l w15">
+ <div class="chp chp-r c-${color} ubd">
+      <span class="c-txt2">${status}</span>
+    </div>
+  </th><th class="mdl m-l w30"><p class="k9 j12">${name}</p></th><th class="mdl m-l w15">
+    <div class="chp c-${color2} ubd">
+      <span class="c-txt2">${format}</span>
+    </div>
+  </th><th class="mdl m-l w15">
+    <div class="chp  c-${color3} ubd">
+      <span class="c-txt2">${type}</span>
+    </div>
+  </th><th class="mdl m-r w10"><p class="k9 j12">${score}</p></th><th class="mdl m-r w15"><p class="k9 j12">${due}</p></th>
 `
 }
 
@@ -171,13 +192,12 @@ function clearCourse() {
 document.querySelectorAll(".trow").forEach(el => el.style.display = "none");
   document.querySelectorAll(".crow").forEach(el => el.style.display = "none");
 
-  const categories = ['tname', 'tdate', 'tlink', 'cname', 'cstatus', 'cdue', 'cformat', 'ctype', 'cscore'];
-  categories.forEach(cat => {
-    for (let i = 0; i <= 10; i++) {
-      const el = document.getElementById(cat + i);
-      if (el) el.innerHTML = '-';
-    }
-  });
+  ['trow', 'crow'].forEach(prefix => {
+  for (let i = 1; i <= 10; i++) {
+    const el = document.getElementById(prefix + i);
+    if (el) el.innerHTML = '';
+  }
+});
 }
 
 // CALENDAR FILLER
@@ -186,7 +206,8 @@ const weeks = [
   document.getElementById("week1"),
   document.getElementById("week2"),
   document.getElementById("week3"),
-  document.getElementById("week4")
+  document.getElementById("week4"),
+  document.getElementById("week5")
 ];
 
 const today = new Date();
