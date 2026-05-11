@@ -41,6 +41,7 @@ setEvent('jun-08', `
     <div class="event" onclick="may11enrolment()">
       <p>📝 Enrolment SHS<br>
       <span class="time">8:00 a.m.</span></p>
+<div class="chp chp-r c-green"><span class="c-txt2">● Done<span></div><br>
     </div>
   `);
 
@@ -72,11 +73,8 @@ document.getElementById("cgclpiciqeakpf").innerHTML = "📝 Enrolment SHS";
   document.getElementById("cgaxhu+dgwkt").innerHTML = "8:00 a.m.";
 document.getElementById("gdmvgjmogvcjk").innerHTML = "May 11, 2026";
 document.getElementById("ukjbqb+ldad").innerHTML = "";
-  document.getElementById("cgaxhu+vgzkb").innerHTML = `
-    <div class="chp c-yellow">
-      <a class="c-txt2">Activity</a>
-    </div>
-  `;
+  document.getElementById("cgaxhu+vgzkb").innerHTML = createChip("Activity", "c-yellow");
+document.getElementById("cahgxu+gjuakyg").innerHTML = createChip2("● Done", "c-green");
 document.getElementById("fxhcck+tlnz").innerHTML = ""
 }
 
@@ -128,11 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function refresh() { 
     const now = new Date();
 
-    const day = now.getDate(); // 11
+    const day = String(now.getDate()).padStart(2, '0'); // if it breaks it's this
     const month = now.toLocaleString('en-US', { month: 'short' }).toLowerCase(); 
-    // "May" -> "may"
-
-    const targetClass = month + "-" + day; // "may-11"
+ 
+    const targetClass = month + "-" + day;
 
     const container = document.getElementById("todayevent");
     if (!container) return;
