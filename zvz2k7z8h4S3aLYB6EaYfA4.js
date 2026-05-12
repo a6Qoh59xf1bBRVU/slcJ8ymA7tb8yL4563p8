@@ -30,6 +30,14 @@ GROUPINGS - green
  PROJECT/PT: Purple
 */
 
+setEvent('may-15', `
+    <div class="event" onclick="may15idmaking()">
+      <p>🏫 I.D. Making<br>
+      <span class="time">8:15 a.m.</span></p>
+<br>
+    </div>
+  `);
+  
 setEvent('jun-08', `
     <div class="event">
       <p>🎆 Opening 2026<br>
@@ -65,6 +73,18 @@ GROUPINGS - green
  MEETING: Black/Gray
  PROJECT/PT: Purple
 */
+
+function may15idmaking() {
+document.getElementById('activitymodal').style.display='block';
+document.getElementById("cagxuxgvyjavcjq").innerHTML = "";
+document.getElementById("cgclpiciqeakpf").innerHTML = "🏫 I.D. Making";
+  document.getElementById("cgaxhu+dgwkt").innerHTML = "8:15 a.m.";
+document.getElementById("gdmvgjmogvcjk").innerHTML = "May 15, 2026";
+document.getElementById("ukjbqb+ldad").innerHTML = "";
+  document.getElementById("cgaxhu+vgzkb").innerHTML = "";
+document.getElementById("cahgxu+gjuakyg").innerHTML = "";
+document.getElementById("fxhcck+tlnz").innerHTML = "Go to school and help feliz make the ids - 8:15 am calltime"
+}
 
 function may11enrolment() {
 document.getElementById('activitymodal').style.display='block';
