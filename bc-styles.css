@@ -216,7 +216,7 @@ width:655px;transition: 0.2s;
 height: 115px;width: 100%;border-radius: 15px;transition: 0.2s;background-size:cover;border-bottom-left-radius: 0px!important;border-bottom-right-radius: 0px!important;
 }
 
-.bccard-content {margin-left: 15px!important; }
+.bccard-content { margin-left: 20px!important;margin-right: 20px!important; }
     
     @media (min-width: 768px) {
 
