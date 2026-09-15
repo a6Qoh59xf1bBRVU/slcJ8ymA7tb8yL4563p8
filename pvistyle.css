@@ -680,6 +680,19 @@ font-weight: 600;margin-bottom: 0px;text-align: center;margin: 0px;
 color: white;border: 1px solid #333;padding: 10px;padding-top: 10px;margin-top: 14px;margin-bottom: 12px;border-radius: 100%;
 }
 
+.cls-btnn {height: 88px;display: flex;background-color: #ffffff00;color: white;padding-left: 36px;padding-right: 36px;}
+
+.cls-btn {
+color: white;border: 1px solid #333;padding: 10px;padding-top: 10px;margin-top: 14px;margin-bottom: 12px;border-radius: 100%;
+}
+
+.cls-btn:hover {
+color: white;border: 1px solid white;padding: 10px;padding-top: 10px;margin-top: 14px;margin-bottom: 12px;border-radius: 100%;
+}
+
+.cls-btn-txt {
+margin-right: 15px;margin-top: 25px;font-size: 17px;font-weight: 600;color: #ffffff}
+
 .xb3 {
 margin-left: 25px;margin-right: 10px;color: #888;font-weight: 700;font-size: 17px;
 }
