@@ -21,6 +21,25 @@ text-align: center;font-size: 50px;margin-top: 175px;font-weight: 600;animation:
 text-align: center;font-weight: 500;animation: 1s infocus
 } .lh195 {line-height: 1.95}
 
+    .offscreen {
+        margin-top: -2500px;pointer-events: none;transition: 2s;
+    }
+
+    .onscreen {
+        margin-top: 0px;pointer-events: auto;transition:0.6s;
+    }
+
+    .gallery {
+         touch-action: pan-y;
+    }
+    
+    .gallerycontent {
+  display: none;
+}
+.gallerycontent.active {
+  display: block;
+}
+
 .bd6 {
 font-weight: 600;
 }
@@ -430,6 +449,10 @@ width: 38%;overflow: hidden;
     width: 100%
 }
 
+.tcvr {
+ background-repeat: no-repeat;background-size: cover;height: 588px;
+}
+
     .crddark {
         background-color: #1e1e1e;transition: 0.3s
     }
@@ -443,6 +466,10 @@ padding-top: 0px;font-size: 18px;margin-bottom: 18px;
 }
     
 @media (min-width: 768px) {
+
+.tcvr {
+ background-repeat: no-repeat;background-size: cover;height: 750px;
+}
 
 .home-hdr {
 text-align: center;font-size: 105px;margin-top: 175px;font-weight: 600;animation: 0.9s infocus
@@ -672,6 +699,10 @@ font-size: 55px;font-weight: 600;animation: 0.9s infocus;font-family: var(--seri
 font-size: 16px;font-weight: 600;animation: 0.9s infocus;text-align: left;font-family: var(--sans);
 }
 
+.mgnl {
+        height: 500px;margin-left: 5%;margin-right: 5%;
+    } .vc2 {text-decoration: none;margin-top: 140px;}
+
 @media (min-width: 768px) {
 .msc-hdr {
 font-size: 80px;font-weight: 600;animation: 0.9s infocus;margin-left: 45px;margin-right: 45px;font-family: var(--serif);
@@ -685,6 +716,14 @@ font-size: 35px;font-weight: 600;animation: 0.9s infocus;text-align: left;margin
 color: white;font-size: 56px;font-weight: 500;cursor: pointer;text-decoration: none;margin-left: 45px;margin-right: 28px;
 }
 
+}
+
+.j3a {
+width: 1px;background-color: #8996A0;height: 170px;position: absolute;margin-left: 50%;animation: 3s line2;
+}
+
+.j3b {
+width: 1px;background-color: #8996A0;height: 280px;position: absolute;margin-left: 50%;animation: 6s line3;margin-top: 470px;
 }
 
 .j9 {
