@@ -1,7 +1,7 @@
 body {margin: 0px;scroll-behavior: smooth;}
 
 :root {
-     --serif: 'Spectral', serif;
+     --serif: 'Crimson Text', serif;
      --sans: 'IBM Plex Sans', sans-serif;
     }
 
@@ -119,7 +119,7 @@ text-decoration: none;
     }
 
     .serif {
-        font-family: 'Spectral', serif;
+        font-family: 'Crimson Text', serif;
     }
 
     details.nrw summary::-webkit-details-marker {
