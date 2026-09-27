@@ -688,7 +688,7 @@ height: 92px;display: flex;padding-left: 0px;padding-right: 30px;border: none;ou
 
 
 .x5 {
-color: white;font-size: 42px;font-weight: 500;cursor: pointer;text-decoration: none;margin-left: 30px;margin-right: 28px;
+color: white;font-size: 48px;font-weight: 500;cursor: pointer;text-decoration: none;margin-left: 30px;margin-right: 28px;
 }
 
 .msc-hdr {
@@ -713,7 +713,7 @@ font-size: 35px;font-weight: 600;animation: 0.9s infocus;text-align: left;margin
 }
 
 .x5 {
-color: white;font-size: 56px;font-weight: 500;cursor: pointer;text-decoration: none;margin-left: 45px;margin-right: 28px;
+color: white;font-size: 70px;font-weight: 500;cursor: pointer;text-decoration: none;margin-left: 45px;margin-right: 28px;
 }
 
 }
@@ -840,7 +840,7 @@ height: 60px;position: absolute;top: 20px;left: 20px;
 
 @media (min-width: 768px) {
 .g8 {
-height: 75px;position: absolute;top: 30px;left: 40px;
+height: 75px;position: absolute;top: 20px;left: 20px;
 }
 }
 
